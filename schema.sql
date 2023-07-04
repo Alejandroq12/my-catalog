@@ -15,3 +15,13 @@ CREATE TABLE authors (
     color TEXT NOT NULL
   );
   
+  CREATE TABLE items (
+    id INTEGER PRIMARY KEY,
+    publish_date TEXT NOT NULL,
+    archived INTEGER DEFAULT 0,
+    author_id INTEGER,
+    label_id INTEGER,
+    FOREIGN KEY (author_id) REFERENCES authors (id),
+    FOREIGN KEY (label_id) REFERENCES labels (id)
+  );
+  
