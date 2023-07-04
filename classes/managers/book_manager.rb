@@ -40,3 +40,8 @@ class BookManager
     store_book(book)
     store_label(label)
   end
+
+  def generate_book_id
+    stored_books = load_data_from_file('data/books.json')
+    stored_books.size
+  end
