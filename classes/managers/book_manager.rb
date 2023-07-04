@@ -50,4 +50,14 @@ class BookManager
     stored_labels = load_data+from_file('data/labels.json')
     stored_labels.size
   end
-  
+
+  def input_cover_condition
+    loop do
+      display_message('Enter the book cover condition (GOOD or BAD): ')
+      cover_condition = gets.chomp.upcase
+      return cover_condition if %w[GOOD BAD].include?(cover_condition)
+
+      display_message('Invalid cover condition. Please enter either GOOD or BAD.')
+    end
+  end
+
