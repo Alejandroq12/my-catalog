@@ -33,3 +33,11 @@ CREATE TABLE authors (
     FOREIGN KEY (item_id) REFERENCES items (id)
   );
   
+  CREATE TABLE games (
+    id INTEGER PRIMARY KEY,
+    multiplayer INTEGER DEFAULT 0,
+    last_played_at TEXT,
+    item_id INTEGER,
+    FOREIGN KEY (item_id) REFERENCES items (id)
+  );
+  
