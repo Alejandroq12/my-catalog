@@ -25,3 +25,11 @@ CREATE TABLE authors (
     FOREIGN KEY (label_id) REFERENCES labels (id)
   );
   
+  CREATE TABLE books (
+    id INTEGER PRIMARY KEY,
+    publisher TEXT NOT NULL,
+    cover_state TEXT NOT NULL,
+    item_id INTEGER,
+    FOREIGN KEY (item_id) REFERENCES items (id)
+  );
+  
