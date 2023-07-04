@@ -86,3 +86,12 @@ class BookManager
     stored_labels << label_data
     write_data_to_file('data/labels.json', stored_labels)
   end
+
+  def load_data_from_file(file_path)
+    return [] unless File.exist?(file_path)
+
+    data = File.read(file_path)
+    data.empty? ? [] : JSON.parse(data)
+  rescue Errno::ENOENT
+    []
+  end
