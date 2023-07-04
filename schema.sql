@@ -9,3 +9,9 @@ CREATE TABLE authors (
     name TEXT NOT NULL
   );
   
+  CREATE TABLE labels (
+    id INTEGER PRIMARY KEY,
+    title TEXT NOT NULL,
+    color TEXT NOT NULL
+  );
+  
