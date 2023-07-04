@@ -108,3 +108,10 @@ class BookManager
         Publish Date: #{book['publish_date']}, Cover Condition: #{book['cover_condition']}")
     end
   end
+
+  def list_all_labels
+    @labels = load_data_from('data/labels.json')
+    @labels.each. do |label|
+      display_message("Label: #{label['title']}, Color: #{label['color']}")
+    end
+  end
