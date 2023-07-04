@@ -101,4 +101,10 @@ class BookManager
     File.write(file_path, data.to_json)
   end
 
-  
+  def list_all_books
+    @books = load_data_from_file('data/books.json')
+    @books.each do |book|
+      display_message("Book Title: #{book['title']}, Publisher: #{book['publisher']},
+        Publish Date: #{book['publish_date']}, Cover Condition: #{book['cover_condition']}")
+    end
+  end
