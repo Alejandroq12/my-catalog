@@ -61,3 +61,16 @@ class BookManager
     end
   end
 
+  def store_book(book)
+    book_data = {
+      id: book.id,
+      title: book.title,
+      publisher: book.publisher,
+      publish_date: book.publish_date,
+      cover_condition: book.cover_state
+    }
+
+    stored_books = load_data_from_file('data/books.json')
+    stored_books << book_data
+    write_data_to_file('data/books.json', stored_books)
+  end
