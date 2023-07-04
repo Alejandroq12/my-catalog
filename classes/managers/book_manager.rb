@@ -47,7 +47,7 @@ class BookManager
   end
 
   def generate_label_id
-    stored_labels = load_data+from_file('data/labels.json')
+    stored_labels = load_data_from_file('data/labels.json')
     stored_labels.size
   end
 
@@ -110,8 +110,17 @@ class BookManager
   end
 
   def list_all_labels
-    @labels = load_data_from('data/labels.json')
-    @labels.each. do |label|
+    @labels = load_data_from_file('data/labels.json')
+    @labels.each do |label|
       display_message("Label: #{label['title']}, Color: #{label['color']}")
     end
   end
+
+  private
+
+  def display_message(message)
+    puts '╔' + '═' * (message.length + 2) + '╗'
+    puts '║ ' + message.chomp + ' ║'
+    puts '╚' + '═' * (message.length + 2) + '╝'
+  end
+end
