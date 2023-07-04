@@ -41,3 +41,10 @@ CREATE TABLE authors (
     FOREIGN KEY (item_id) REFERENCES items (id)
   );
   
+  CREATE TABLE music_albums (
+    id INTEGER PRIMARY KEY,
+    on_spotify INTEGER DEFAULT 0,
+    item_id INTEGER,
+    FOREIGN KEY (item_id) REFERENCES items (id)
+  );
+  
