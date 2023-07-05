@@ -26,6 +26,9 @@ class GameManager
 
     label_id = generate_label_id
     label = Label.new(id: label_id, title: title, color: color)
+
+    @games.push(game)
+    @labels.push(label)
   end
 
 end
