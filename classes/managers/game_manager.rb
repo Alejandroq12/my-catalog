@@ -10,4 +10,9 @@ class GameManager
     @games = []
     @labels = []
   end
+
+  def add_game
+
+  end
+
 end
