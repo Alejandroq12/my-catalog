@@ -8,6 +8,5 @@ class GameManager
 
   def initialize
     @games = []
-    @lables = []
+    @labels = []
   end
-end
