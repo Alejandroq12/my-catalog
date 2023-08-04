@@ -4,4 +4,5 @@ require 'json'
 require 'fileutils'
 
 class GameManager
+  attr_accessor :games, :labels
 end
