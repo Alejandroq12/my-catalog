@@ -18,5 +18,7 @@ class GameManager
     release_date = gets.chomp
     display_message('Enter the game publisher: ')
     publisher = gets.chomp
+    display_message('Enter the game cover color: ')
+    color = gets.chomp
   end
 end
