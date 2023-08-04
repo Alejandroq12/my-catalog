@@ -58,4 +58,13 @@ class GameManager
   end
 
   def store_label(label)
+    label_data = {
+      id: label.id,
+      title: label.title,
+      color: label.color
+    }
+
+    stored_labels = load_data_from_file('data/labels.json')
+    stored_labels << label_data
+    write_data_to_file('data/labels.json', stored_labels)
   end
