@@ -29,4 +29,7 @@ class GameManager
 
     @games.push(game)
     @labels.push(label)
-end
+    display_message('Game added successfully.')
+    store_game(game)
+    store_label(label)
+  end
