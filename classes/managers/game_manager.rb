@@ -43,3 +43,16 @@ class GameManager
     stored_labels = load_data_from_file('data/labels.json')
     stored_labels.size
   end
+
+  def store_game(game)
+    game_data = {
+      id: game.id,
+      title: game.title,
+      publisher: game.author,
+      release_date: game.publish_date
+    }
+
+    stored_games = load_data_from_file('data/games.json')
+    stored_games << game_data
+    write_data_to_file('data/games.json', stored_games)
+  end
