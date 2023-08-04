@@ -70,4 +70,5 @@ class GameManager
   end
 
   def load_data_from_file(file_path)
+    return [] unless File.exist?(file_path)
   end
