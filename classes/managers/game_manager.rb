@@ -12,5 +12,7 @@ class GameManager
   end
 
   def add_game
+    display_message('Enter the game title: ')
+    title = gets.chomp
   end
 end
