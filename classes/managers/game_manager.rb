@@ -5,4 +5,9 @@ require 'fileutils'
 
 class GameManager
   attr_accessor :games, :labels
+
+  def initialize
+    @games = []
+    @lables = []
+  end
 end
