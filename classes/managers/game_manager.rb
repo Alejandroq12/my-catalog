@@ -33,3 +33,8 @@ class GameManager
     store_game(game)
     store_label(label)
   end
+
+  def generate_game_id
+    stored_games = load_data_from_file('data/games.json')
+    stored_games.size
+  end
