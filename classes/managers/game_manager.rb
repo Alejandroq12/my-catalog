@@ -10,3 +10,4 @@ class GameManager
     @games = []
     @labels = []
   end
+end
