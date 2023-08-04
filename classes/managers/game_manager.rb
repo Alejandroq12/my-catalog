@@ -16,5 +16,7 @@ class GameManager
     title = gets.chomp
     display_message('Enter the game\'s release date (YYYY-MM-DD): ')
     release_date = gets.chomp
+    display_message('Enter the game publisher: ')
+    publisher = gets.chomp
   end
 end
