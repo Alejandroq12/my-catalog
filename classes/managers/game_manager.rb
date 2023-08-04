@@ -68,3 +68,6 @@ class GameManager
     stored_labels << label_data
     write_data_to_file('data/labels.json', stored_labels)
   end
+
+  def load_data_from_file(file_path)
+  end
