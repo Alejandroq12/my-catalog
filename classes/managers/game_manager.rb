@@ -79,4 +79,6 @@ class GameManager
   end
 
   def write_data_to_file(file_path, data)
+    FileUtils.mkdir_p('data')
+    File.write(file_path, data.to_json)
   end
