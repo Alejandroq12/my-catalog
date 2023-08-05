@@ -101,5 +101,8 @@ class GameManager
   private
 
   def display_message(message)
+    puts '╔' + '═' * (message.length + 2) + '╗'
+    puts '║ ' + message.chomp + ' ║'
+    puts '╚' + '═' * (message.length + 2) + '╝'
   end
 end
