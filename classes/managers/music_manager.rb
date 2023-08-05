@@ -6,4 +6,9 @@ require 'securerandom'
 
 class MusicManager
   attr_accessor :albums, :labels
+
+  def initialize
+    @albums = []
+    @labels = []
+  end
 end
