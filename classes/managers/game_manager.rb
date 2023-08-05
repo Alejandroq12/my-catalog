@@ -92,4 +92,8 @@ class GameManager
   end
 
   def list_all_labels
+    @labels = load_data_from_file('data/labels.json')
+    @labels.each do |label|
+      display_message("Label: #{label['title']}, Color: #{label['color']}")
+    end
   end
