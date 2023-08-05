@@ -97,3 +97,5 @@ class GameManager
       display_message("Label: #{label['title']}, Color: #{label['color']}")
     end
   end
+
+  private
