@@ -82,3 +82,6 @@ class GameManager
     FileUtils.mkdir_p('data')
     File.write(file_path, data.to_json)
   end
+
+  def list_all_games
+  end
