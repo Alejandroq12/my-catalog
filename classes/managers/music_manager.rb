@@ -20,10 +20,14 @@ class MusicManager
     artist = gets.chomp
     display_message('Enter the album cover color: ')
     color = gets.chomp
-
-    label = Label.new(id: SecureRamdom.uuid, title: title, color: color)
-
-    @albums = MusicAlbum.new(on_spotify: false, title: title, publish_date: release_date, author: artist, label: label)
-
+  
+    label = Label.new(id: SecureRandom.uuid, title: title, color: color)
+  
+    album = MusicAlbum.new(on_spotify: false, title: title, publish_date: release_date, author: artist, label: label)
+    @albums.push(album)
+    @labels.push(label)
+    display_message('Music album added successfully.')
+    store_album(album)
+    store_label(label)
   end
 end
