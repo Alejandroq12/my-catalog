@@ -99,3 +99,7 @@ class GameManager
   end
 
   private
+
+  def display_message(message)
+  end
+end
