@@ -21,5 +21,9 @@ class MusicManager
     display_message('Enter the album cover color: ')
     color = gets.chomp
 
+    label = Label.new(id: SecureRamdom.uuid, title: title, color: color)
+
+    @albums = MusicAlbum.new(on_spotify: false, title: title, publish_date: release_date, author: artist, label: label)
+
   end
 end
