@@ -5,4 +5,5 @@ require 'fileutils'
 require 'securerandom'
 
 class MusicManager
+  attr_accessor :albums, :labels
 end
