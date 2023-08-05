@@ -11,4 +11,7 @@ class MusicManager
     @albums = []
     @labels = []
   end
+
+  def add_album
+  end
 end
