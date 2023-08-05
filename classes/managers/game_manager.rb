@@ -84,4 +84,9 @@ class GameManager
   end
 
   def list_all_games
+    @games = load_data_from_file('data/games.json')
+    @games.each do |game|
+      display_message("Game Title: #{game['title']}, Publisher: #{game['author']},
+        Release Date: #{game['release_date']}")
+    end
   end
