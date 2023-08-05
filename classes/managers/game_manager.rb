@@ -90,3 +90,6 @@ class GameManager
         Release Date: #{game['release_date']}")
     end
   end
+
+  def list_all_labels
+  end
