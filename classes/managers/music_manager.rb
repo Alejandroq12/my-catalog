@@ -11,7 +11,15 @@ class MusicManager
     @albums = []
     @labels = []
   end
-
   def add_album
+    display_message('Enter the album title: ')
+    title = gets.chomp
+    display_message('Enter the album\'s release date (YYYY-MM-DD): ')
+    release_date = gets.chomp
+    display_message('Enter the album artist: ')
+    artist = gets.chomp
+    display_message('Enter the album cover color: ')
+    color = gets.chomp
+
   end
 end
