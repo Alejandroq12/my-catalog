@@ -52,6 +52,7 @@ class MusicManager
       color: label.color
     }
 
-    
+    stored_labels = load_data_from_file('data/labels.json')
+
   end
 end
