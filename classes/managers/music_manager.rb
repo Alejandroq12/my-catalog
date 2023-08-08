@@ -62,5 +62,6 @@ class MusicManager
     return [] unless File.exist?(file_path)
 
     data = File.read(file_path)
+    data.empty? ? [] : JSON.parse(data)
   end
 end
