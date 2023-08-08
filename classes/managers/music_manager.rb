@@ -54,6 +54,7 @@ class MusicManager
 
     stored_labels = load_data_from_file('data/labels.json')
     stored_labels << label_data
+    write_data_to_file('data/labels.json', stored_labels)
 
   end
 end
