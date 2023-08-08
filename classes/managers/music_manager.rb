@@ -30,4 +30,7 @@ class MusicManager
     store_album(album)
     store_label(label)
   end
+
+  def store_album(album)
+  end
 end
