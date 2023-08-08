@@ -44,6 +44,7 @@ class MusicManager
     stored_albums << album_data
     write_data_to_file('data/albums.json', stored_albums)
   end
+  
 
   def store_label(label)
     label_data = {
@@ -55,6 +56,8 @@ class MusicManager
     stored_labels = load_data_from_file('data/labels.json')
     stored_labels << label_data
     write_data_to_file('data/labels.json', stored_labels)
+  end
 
+  def load_data_from_file(file_path)
   end
 end
