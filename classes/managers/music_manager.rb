@@ -38,5 +38,9 @@ class MusicManager
       author: album.author,
       release_date: album.publish_date,
     }
+
+    stored_albums = load_data_from_file('data/albums.json')
+    stored_albums << album_data
+    write_data_to_file('data/albums.json', stored_albums)
   end
 end
