@@ -60,5 +60,7 @@ class MusicManager
 
   def load_data_from_file(file_path)
     return [] unless File.exist?(file_path)
+
+    data = File.read(file_path)
   end
 end
