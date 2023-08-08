@@ -32,5 +32,11 @@ class MusicManager
   end
 
   def store_album(album)
+    album_data = {
+      id: album.id,
+      title: album.title,
+      author: album.author,
+      release_date: album.publish_date,
+    }
   end
 end
