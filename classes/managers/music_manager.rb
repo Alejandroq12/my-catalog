@@ -63,5 +63,34 @@ class MusicManager
 
     data = File.read(file_path)
     data.empty? ? [] : JSON.parse(data)
+  rescue Errno::ENOENT
+    []
+  end
+
+  def write_data_to_file(file_path, data)
+    FileUtils.mkdir_p('data')
+    File.write(file_path, data.to_json)
+  end
+
+  def list_all_albums
+    @albums = load_data_from_file('data/albums.json')
+    @albums.each do |album|
+      display_message("Album Title: #{album['title']}, Artist: #{album['artist']}, Release Date: #{album['release_date']}")
+    end
+  end
+
+  def list_all_labels
+    @labels = load_data_from_file('data/labels.json')
+    @labels.each do |label|
+      display_message("Label: #{label['title']}, Color: #{label['color']}")
+    end
+  end
+
+  private
+
+  def display_message(message)
+    puts '╔' + '═' * (message.length + 2) + '╗'
+    puts '║ ' + message.chomp + ' ║'
+    puts '╚' + '═' * (message.length + 2) + '╝'
   end
 end
