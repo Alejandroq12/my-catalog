@@ -74,5 +74,6 @@ class MusicManager
 
   def list_all_albums
     @albums = load_data_from_file('data/albums.json')
+    @labels.each do |album|
   end
 end
