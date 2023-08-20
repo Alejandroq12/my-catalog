@@ -75,5 +75,7 @@ class MusicManager
   def list_all_albums
     @albums = load_data_from_file('data/albums.json')
     @labels.each do |album|
+      display_message("Album Title: #{album['title']}, Artist: #{album['artist']}, Release Date: #{album['release_date']}")
+    end
   end
 end
