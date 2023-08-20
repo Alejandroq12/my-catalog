@@ -66,4 +66,7 @@ class MusicManager
   rescue Errno::ENOENT
     []
   end
+
+  def write_data_to_file(file_path, data)
+  end
 end
