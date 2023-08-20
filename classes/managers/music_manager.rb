@@ -78,4 +78,7 @@ class MusicManager
       display_message("Album Title: #{album['title']}, Artist: #{album['artist']}, Release Date: #{album['release_date']}")
     end
   end
+
+  def list_all_labels
+  end
 end
