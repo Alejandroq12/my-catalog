@@ -73,5 +73,6 @@ class MusicManager
   end
 
   def list_all_albums
+    @albums = load_data_from_file('data/albums.json')
   end
 end
