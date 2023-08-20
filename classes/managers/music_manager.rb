@@ -68,13 +68,13 @@ class MusicManager
   end
 
   def write_data_to_file(file_path, data)
-    FileUtils.mkdir_p("data")
+    FileUtils.mkdir_p('data')
     File.write(file_path, data.to_json)
   end
 
   def list_all_albums
     @albums = load_data_from_file('data/albums.json')
-    @labels.each do |album|
+    @albums.each do |album|
       display_message("Album Title: #{album['title']}, Artist: #{album['artist']}, Release Date: #{album['release_date']}")
     end
   end
