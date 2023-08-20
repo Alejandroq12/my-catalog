@@ -63,5 +63,7 @@ class MusicManager
 
     data = File.read(file_path)
     data.empty? ? [] : JSON.parse(data)
+  rescue Errno::ENOENT
+    []
   end
 end
