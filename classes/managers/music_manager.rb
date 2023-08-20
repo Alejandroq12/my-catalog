@@ -80,5 +80,6 @@ class MusicManager
   end
 
   def list_all_labels
+    @labels = load_data_from_file('data/labels.json')
   end
 end
