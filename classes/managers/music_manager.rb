@@ -81,5 +81,7 @@ class MusicManager
 
   def list_all_labels
     @labels = load_data_from_file('data/labels.json')
+    @labels.each do |label|
+    end
   end
 end
